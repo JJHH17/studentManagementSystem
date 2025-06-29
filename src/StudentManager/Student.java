@@ -10,8 +10,18 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.studentId++;
+        this.studentId = (int) (Math.random() * 1_000);
     }
 
+    public String toString() {
+        return "Name: " + this.firstName + " " + this.lastName + ", ID: " + this.studentId;
+    }
 
+    public int getID() {
+        return this.studentId;
+    }
+
+    public String getName() {
+        return this.firstName + " " + this.lastName;
+    }
 }
