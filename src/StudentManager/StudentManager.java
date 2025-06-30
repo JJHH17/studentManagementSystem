@@ -31,8 +31,20 @@ public class StudentManager {
         }
     }
 
-    public void removeStudent(String name) {
-        // Add method to remove student based on (full) name
+    public void removeStudent(String firstName, String lastName) {
+        boolean found = false;
+
+        for (Student student : this.studentList) {
+            if (student.getName().equalsIgnoreCase(firstName + " " + lastName)) {
+                found = true;
+                this.studentList.remove(student);
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Student name: " + firstName + " " + lastName + " not found.");
+        }
     }
 
     public void printStudents() {
