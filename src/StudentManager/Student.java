@@ -17,6 +17,10 @@ public class Student {
         return "Name: " + this.firstName + " " + this.lastName + ", ID: " + this.studentId;
     }
 
+    public int getID() {
+        return this.studentId;
+    }
+
     public String getName() {
         return this.firstName + " " + this.lastName;
     }
