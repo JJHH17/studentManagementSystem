@@ -40,4 +40,12 @@ public class StudentManager {
             System.out.println(student);
         }
     }
+
+    public String printStudentsByAge(int age) {
+        return null;
+    }
+
+    public String printStudentsByAgeRange(int lower, int upper) {
+        return null;
+    }
 }
