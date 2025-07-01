@@ -14,7 +14,7 @@ public class Student {
     }
 
     public String toString() {
-        return "Name: " + this.firstName + " " + this.lastName + ", ID: " + this.studentId;
+        return "Name: " + this.firstName + " " + this.lastName + ", ID: " + this.studentId + ", Age: " + this.age;
     }
 
     public int getID() {
