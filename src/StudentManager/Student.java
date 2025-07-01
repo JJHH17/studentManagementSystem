@@ -24,4 +24,8 @@ public class Student {
     public String getName() {
         return this.firstName + " " + this.lastName;
     }
+
+    public int getAge() {
+        return this.age;
+    }
 }
