@@ -54,7 +54,7 @@ public class StudentManager {
     }
 
     public void printStudentsByAge(int age) {
-        for (Student student : studentList) {
+        for (Student student : this.studentList) {
             if (student.getAge() == age) {
                 System.out.println(student);
             }
@@ -62,6 +62,10 @@ public class StudentManager {
     }
 
     public void printStudentsByAgeRange(int lower, int upper) {
-
+        for (Student student : this.studentList) {
+            if (student.getAge() >= lower && student.getAge() <= upper) {
+                System.out.println(student);
+            }
+        }
     }
 }
