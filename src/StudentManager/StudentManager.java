@@ -53,11 +53,15 @@ public class StudentManager {
         }
     }
 
-    public String printStudentsByAge(int age) {
-        return null;
+    public void printStudentsByAge(int age) {
+        for (Student student : studentList) {
+            if (student.getAge() == age) {
+                System.out.println(student);
+            }
+        }
     }
 
-    public String printStudentsByAgeRange(int lower, int upper) {
-        return null;
+    public void printStudentsByAgeRange(int lower, int upper) {
+
     }
 }
