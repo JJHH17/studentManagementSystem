@@ -19,6 +19,10 @@ public class UserInterface {
             System.out.println("'Add' = Adds a new student | 'Remove Name' Removes student based on name | 'Remove ID' Removes student based on ID");
             String userInput = scanner.nextLine();
 
+            if (userInput.equalsIgnoreCase("quit")) {
+                break;
+            }
+
             switch(userInput.toLowerCase()) {
                 case "add":
                     System.out.println("Enter first name:");
