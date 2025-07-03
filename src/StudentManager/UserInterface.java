@@ -56,6 +56,14 @@ public class UserInterface {
 
                     this.school.printStudentsByAge(printedAge);
 
+                case "print by range":
+                    System.out.println("Enter the minimum age you wish to print:");
+                    int minimumAge = Integer.valueOf(scanner.nextLine());
+
+                    System.out.println("Enter the maximum age you wish to print:");
+                    int maximumAge = Integer.valueOf(scanner.nextLine());
+
+                    this.school.printStudentsByAgeRange(minimumAge, maximumAge);
             }
         }
     }
