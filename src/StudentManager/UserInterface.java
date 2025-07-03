@@ -31,6 +31,7 @@ public class UserInterface {
                     int age = Integer.valueOf(scanner.nextLine());
 
                     this.school.addStudent(firstName, lastName, age);
+                    break;
 
                 case "remove name":
                     System.out.println("Enter students first name:");
@@ -40,15 +41,18 @@ public class UserInterface {
                     String lastNameDelete = scanner.nextLine();
 
                     this.school.removeStudent(firstNameDelete, lastNameDelete);
+                    break;
 
                 case "remove id":
                     System.out.println("Enter the ID of the student you wish to delete:");
                     int idDelete = Integer.valueOf(scanner.nextLine());
 
                     this.school.removeStudent(idDelete);
+                    break;
 
                 case "print all":
                     this.school.printStudents();
+                    break;
 
                 case "print by age":
                     System.out.println("Enter the age you wish to print:");
@@ -64,6 +68,7 @@ public class UserInterface {
                     int maximumAge = Integer.valueOf(scanner.nextLine());
 
                     this.school.printStudentsByAgeRange(minimumAge, maximumAge);
+                    break;
             }
         }
     }
