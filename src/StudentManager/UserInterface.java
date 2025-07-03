@@ -31,6 +31,15 @@ public class UserInterface {
                     int age = Integer.valueOf(scanner.nextLine());
 
                     this.school.addStudent(firstName, lastName, age);
+
+                case "remove name":
+                    System.out.println("Enter students first name:");
+                    String firstNameDelete = scanner.nextLine();
+
+                    System.out.println("Enter last name:");
+                    String lastNameDelete = scanner.nextLine();
+
+                    this.school.removeStudent(firstNameDelete, lastNameDelete);
             }
         }
     }
