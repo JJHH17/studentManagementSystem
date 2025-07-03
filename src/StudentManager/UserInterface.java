@@ -64,6 +64,7 @@ public class UserInterface {
                     int printedAge = Integer.valueOf(scanner.nextLine());
 
                     this.school.printStudentsByAge(printedAge);
+                    break;
 
                 case "print by range":
                     System.out.println("Enter the minimum age you wish to print:");
