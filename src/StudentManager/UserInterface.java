@@ -40,6 +40,22 @@ public class UserInterface {
                     String lastNameDelete = scanner.nextLine();
 
                     this.school.removeStudent(firstNameDelete, lastNameDelete);
+
+                case "remove id":
+                    System.out.println("Enter the ID of the student you wish to delete:");
+                    int idDelete = Integer.valueOf(scanner.nextLine());
+
+                    this.school.removeStudent(idDelete);
+
+                case "print all":
+                    this.school.printStudents();
+
+                case "print by age":
+                    System.out.println("Enter the age you wish to print:");
+                    int printedAge = Integer.valueOf(scanner.nextLine());
+
+                    this.school.printStudentsByAge(printedAge);
+
             }
         }
     }
