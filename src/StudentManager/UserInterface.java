@@ -16,7 +16,7 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("'Add' = Adds a new student | 'Remove Name' Removes student based on name | 'Remove ID' Removes student based on ID | 'print all' prints all students | " +
+            System.out.println("'Add' = Adds a new student | 'Remove Name' Removes student based on name | 'Remove ID' Removes student based on ID | 'print all' prints all students | \n" +
                     "'print by age' prints students with a given age | 'print by range' prints students in a given age range | 'quit' exits the program");
             String userInput = scanner.nextLine();
 
@@ -75,6 +75,10 @@ public class UserInterface {
 
                     this.school.printStudentsByAgeRange(minimumAge, maximumAge);
                     break;
+
+                default:
+                    System.out.println("Please enter a valid entry");
+                    continue;
             }
         }
     }
