@@ -18,7 +18,7 @@ public class UserInterface {
         while (true) {
             System.out.println("'Add' = Adds a new student | 'Remove Name' Removes student based on name | 'Remove ID' Removes student based on ID | 'print all' prints all students | \n" +
                     "'print by age' prints students with a given age | 'print by range' prints students in a given age range | 'quit' exits the program");
-            String userInput = scanner.nextLine();
+            String userInput = scanner.nextLine().strip();
 
             if (userInput.equalsIgnoreCase("quit")) {
                 break;
@@ -27,30 +27,30 @@ public class UserInterface {
             switch(userInput.toLowerCase()) {
                 case "add":
                     System.out.println("Enter first name:");
-                    String firstName = scanner.nextLine();
+                    String firstName = scanner.nextLine().strip();
 
                     System.out.println("Enter last name:");
-                    String lastName = scanner.nextLine();
+                    String lastName = scanner.nextLine().strip();
 
                     System.out.println("Enter age:");
-                    int age = Integer.valueOf(scanner.nextLine());
+                    int age = Integer.valueOf(scanner.nextLine().strip());
 
                     this.school.addStudent(firstName, lastName, age);
                     break;
 
                 case "remove name":
                     System.out.println("Enter students first name:");
-                    String firstNameDelete = scanner.nextLine();
+                    String firstNameDelete = scanner.nextLine().strip();
 
                     System.out.println("Enter last name:");
-                    String lastNameDelete = scanner.nextLine();
+                    String lastNameDelete = scanner.nextLine().strip();
 
                     this.school.removeStudent(firstNameDelete, lastNameDelete);
                     break;
 
                 case "remove id":
                     System.out.println("Enter the ID of the student you wish to delete:");
-                    int idDelete = Integer.valueOf(scanner.nextLine());
+                    int idDelete = Integer.valueOf(scanner.nextLine().strip());
 
                     this.school.removeStudent(idDelete);
                     break;
@@ -61,17 +61,17 @@ public class UserInterface {
 
                 case "print by age":
                     System.out.println("Enter the age you wish to print:");
-                    int printedAge = Integer.valueOf(scanner.nextLine());
+                    int printedAge = Integer.valueOf(scanner.nextLine().strip());
 
                     this.school.printStudentsByAge(printedAge);
                     break;
 
                 case "print by range":
                     System.out.println("Enter the minimum age you wish to print:");
-                    int minimumAge = Integer.valueOf(scanner.nextLine());
+                    int minimumAge = Integer.valueOf(scanner.nextLine().strip());
 
                     System.out.println("Enter the maximum age you wish to print:");
-                    int maximumAge = Integer.valueOf(scanner.nextLine());
+                    int maximumAge = Integer.valueOf(scanner.nextLine().strip());
 
                     this.school.printStudentsByAgeRange(minimumAge, maximumAge);
                     break;
