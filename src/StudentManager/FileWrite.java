@@ -5,13 +5,10 @@ import java.io.IOException;
 import java.io.FileWriter;
 
 public class FileWrite {
-    public FileWrite(String s) {
-
-    }
 
     public void createFile() {
         try {
-            File classroom = new File("../classroom.txt");
+            File classroom = new File("classroom.txt");
             if (classroom.createNewFile()) {
                 System.out.println("File created: " + classroom.getName());
             } else {
