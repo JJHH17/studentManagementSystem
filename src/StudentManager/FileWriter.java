@@ -6,7 +6,7 @@ import java.io.IOException;
 public class FileWriter {
     public FileWriter() {
         try {
-            File classroom = new File("classroom.txt");
+            File classroom = new File("../classroom.txt");
             if (classroom.createNewFile()) {
                 System.out.println("File created: " + classroom.getName());
             } else {
