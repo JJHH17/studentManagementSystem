@@ -1,19 +1,23 @@
 package StudentManager;
 
+import java.io.FileWriter;
 import java.util.Scanner;
 
 
 public class UserInterface {
     private StudentManager school;
     private Scanner scanner;
+    private FileWrite file;
 
     public UserInterface(Scanner scanner) {
         this.school = new StudentManager();
         this.scanner = scanner;
+        this.file = new FileWrite();
     }
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
+        file.createFile();
 
         while (true) {
             System.out.println("'Add' = Adds a new student | 'Remove Name' Removes student based on name | 'Remove ID' Removes student based on ID | 'print all' prints all students | \n" +
