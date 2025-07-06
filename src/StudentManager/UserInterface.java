@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class UserInterface {
     private StudentManager school;
     private Scanner scanner;
-    private FileWrite file;
+    private FileManager file;
 
     public UserInterface(Scanner scanner) {
         this.school = new StudentManager();
         this.scanner = scanner;
-        this.file = new FileWrite();
+        this.file = new FileManager();
     }
 
     public void start() {
