@@ -3,6 +3,7 @@ package StudentManager;
 import java.io.File;
 import java.io.IOException;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 public class FileWrite {
 
@@ -21,10 +22,14 @@ public class FileWrite {
         }
     }
 
-    public void writeFile() {
+    public void writeFile(ArrayList<Student> students) {
         try {
-            FileWriter fileWrite = new FileWriter("../classroom.txt");
-            fileWrite.write("This was successful");
+            FileWriter fileWrite = new FileWriter("classroom.txt");
+            // Adding students to file
+            for (Student student : students) {
+                fileWrite.write(student.toString() + "\n");
+            }
+
             fileWrite.close();
             System.out.println("Wrote to file successfully.");
 
