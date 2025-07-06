@@ -68,4 +68,8 @@ public class StudentManager {
             }
         }
     }
+
+    public ArrayList<Student> getStudents() {
+        return this.studentList;
+    }
 }
