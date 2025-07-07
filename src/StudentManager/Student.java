@@ -13,8 +13,17 @@ public class Student {
         this.studentId = studentID;
     }
 
+    @Override
     public String toString() {
         return "Name: " + this.firstName + " " + this.lastName + ", ID: " + this.studentId + ", Age: " + this.age;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
     }
 
     public int getID() {
