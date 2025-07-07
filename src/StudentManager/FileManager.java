@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class FileManager {
+    private final String FILENAME = "classroom.txt"; // File constant for reading and writing
 
     public void createFile() {
         try {
@@ -21,14 +22,15 @@ public class FileManager {
     }
 
     public void writeFile(ArrayList<Student> students) {
-        try {
-            FileWriter fileWrite = new FileWriter("classroom.txt");
+        try (FileWriter fileWrite = new FileWriter(FILENAME)){
             // Adding students to file
             for (Student student : students) {
-                fileWrite.write(student.toString() + "\n");
+                fileWrite.write(String.format("%s,%s,%d,%d\n",
+                        student.getFirstName(),
+                        student.getFirstName(),
+                        student.getAge(),
+                        student.getID()));
             }
-
-            fileWrite.close();
             System.out.println("Wrote to file successfully.");
 
         } catch (IOException e) {
