@@ -1,5 +1,6 @@
 package StudentManager;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
@@ -7,17 +8,17 @@ import java.util.Scanner;
 public class UserInterface {
     private StudentManager school;
     private Scanner scanner;
-    private FileManager file;
+    private FileManager fileManager;
 
     public UserInterface(Scanner scanner) {
-        this.school = new StudentManager();
+        this.fileManager = new FileManager();
+        this.school = new StudentManager(fileManager);
         this.scanner = scanner;
-        this.file = new FileManager();
     }
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
-        file.createFile(); // Creates a file used to store data.
+        fileManager.createFile();
 
         while (true) {
             System.out.println("'Add' = Adds a new student | 'Remove Name' Removes student based on name | 'Remove ID' Removes student based on ID | 'print all' prints all students | \n" +
@@ -41,7 +42,7 @@ public class UserInterface {
 
                     this.school.addStudent(firstName, lastName, age);
                     // Adding students to file
-                    this.file.writeFile(this.school.getStudents());
+                    this.fileManager.writeFile(this.school.getStudents());
                     break;
 
                 case "remove name":
