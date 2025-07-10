@@ -21,8 +21,8 @@ public class UserInterface {
         fileManager.createFile();
 
         while (true) {
-            System.out.println("'Add' = Adds a new student | 'Remove Name' Removes student based on name | 'Remove ID' Removes student based on ID | 'print all' prints all students | \n" +
-                    "'print by age' prints students with a given age | 'print by range' prints students in a given age range | 'quit' exits the program");
+            System.out.println("\n'Add' = Adds a new student \n'Remove Name' Removes student based on name \n'Remove ID' Removes student based on ID \n'print all' prints all students | \n" +
+                    "'print by age' prints students with a given age \n'print by range' prints students in a given age range \n'quit' exits the program");
             String userInput = scanner.nextLine().strip();
 
             if (userInput.equalsIgnoreCase("quit")) {
