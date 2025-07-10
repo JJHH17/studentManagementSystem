@@ -18,7 +18,7 @@ public class FileManager {
             }
 
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred when creating the file.");
             e.printStackTrace();
         }
     }
@@ -36,13 +36,14 @@ public class FileManager {
             System.out.println("Wrote to file successfully.");
 
         } catch (IOException e) {
-            System.out.println("An error occurred (File Write)");
+            System.out.println("An error occurred when writing to the file.");
             e.printStackTrace();
         }
     }
 
     public ArrayList<Student> readFile() {
         ArrayList<Student> students = new ArrayList<>();
+        // Adding file contents to array, to be read by program
         try (Scanner fileScanner = new Scanner (new File(FILENAME))) {
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
