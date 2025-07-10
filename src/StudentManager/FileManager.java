@@ -33,7 +33,6 @@ public class FileManager {
                         student.getAge(),
                         student.getID()));
             }
-            System.out.println("Wrote to file successfully.");
 
         } catch (IOException e) {
             System.out.println("An error occurred when writing to the file.");
